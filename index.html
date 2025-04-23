@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CISK Plants</title>
+  <style>
+    :root {
+      --green: #4CAF50;
+      --light-green: #e9f9ec;
+      --dark: #2f4f4f;
+      --card-bg: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--light-green);
+      color: var(--dark);
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: var(--green);
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      width: 100%;
+      max-width: 900px;
+    }
+
+    .plant-card {
+      background: var(--card-bg);
+      padding: 1.2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .plant-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .plant-card a {
+      text-decoration: none;
+      color: var(--dark);
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    .emoji {
+      font-size: 2rem;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2rem;
+      }
+      .plant-card a {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>- The CISK Garden -</h1>
+  <p>Click a plant to learn more about its care and details.</p>
+
+  <div class="grid">
+    <div class="plant-card">
+      <span class="emoji">🌺</span>
+      <a href="hibiscus.html">Hibiscus</a>
+    </div>
+    <div class="plant-card">
+      <span class="emoji">🌿</span>
+      <a href="curry-leaf.html">Curry Leaf</a>
+    </div>
+    <div class="plant-card">
+      <span class="emoji">🪴</span>
+      <a href="aloe-vera.html">Aloe Vera</a>
+    </div>
+    <div class="plant-card">
+      <span class="emoji">🌱</span>
+      <a href="basil.html">Basil</a>
+    </div>
+    <div class="plant-card">
+      <span class="emoji">🕉️</span>
+      <a href="tulsi.html">Tulsi</a>
+    </div>
+  </div>
+</body>
+</html>
